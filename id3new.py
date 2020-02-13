@@ -118,7 +118,7 @@ def openIrisdata():
     rotated_data.append(temp)
   
   ##set unique values for each attribute
-  for i in range (len(attribute_names)-1):
+  for i in range (len(attribute_names)):
     attribute_values.append(list(set(rotated_data[i])))
     available_attribute_idxs.append(i)
   target_values = list(set(target))
