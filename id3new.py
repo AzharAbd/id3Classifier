@@ -103,8 +103,11 @@ def openIrisdata():
   iris = load_iris()
 
   data = iris.data
-  target = iris.target
   attribute_names = iris.feature_names
+
+  temp_target = iris.target
+  for idx in temp_target:
+    target.append(iris.target_names[idx])
 
   ##rotate data
   rotated_data = []
